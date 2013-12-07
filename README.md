@@ -18,8 +18,23 @@ Make executable :
   
 Edit rules :
 
-    /etc/init.d/firewall.sh
+    nano /etc/init.d/firewall.sh
     
+Example, if you want the server to :
+
+- accept SSH connections on default port 22
+- work as a webserver on port 80 and 443 for SSL connections
+- work as a proxy on port 3128
+- run transmission torrent client on port 9091
+
+You must edit the INCOMING RULES like this :
+
+    TCP_SERVICES="22 80 443 3128 9091"
+    
+Example, to allow the server to connect to the internet (to download updates @ upgrades it will use port 80 and 443)
+
+    REMOTE_TCP_SERVICES="80 443"
+
 ##Testing and running the script :
   
 Test the rules for 30 seconds :
