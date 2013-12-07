@@ -27,11 +27,11 @@ Example, if you want the server to :
 - work as a proxy on port 3128
 - run transmission torrent client on port 9091
 
-You must edit the INCOMING RULES like this :
+You must edit the **INCOMING RULES** like this :
 
     TCP_SERVICES="22 80 443 3128 9091"
     
-Example, to allow the server to connect to the internet (to download updates @ upgrades it will use port 80 and 443)
+Example, to allow the server to connect to the internet (to download updates @ upgrades it will use port 80 and 443) you must edit the **OUTGOING RULES** like this :
 
     REMOTE_TCP_SERVICES="80 443"
 
