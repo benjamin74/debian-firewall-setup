@@ -19,6 +19,12 @@
 
 PATH=/bin:/sbin:/usr/bin:/usr/sbin
 
+
+
+#################################
+# START EDITING RULES BELOW
+#################################
+
 # INCOMING CONNECTIONS
 # i.e. OUTSIDE WORLD ----> THE SERVER WHERE THE SCRIPT IS INSTALLED
 TCP_SERVICES="22" # SSH 
@@ -31,6 +37,14 @@ REMOTE_UDP_SERVICES="53" # DNS
 # FTP backups 
 # Allow backups to an external FTP
 FTP_BACKUPS=""
+
+#################################
+# DO NOT EDIT ANYTHING BELOW
+#################################
+
+
+
+
 
 if ! [ -x /sbin/iptables ]; then
 	exit 0
