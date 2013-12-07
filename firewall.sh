@@ -2,7 +2,7 @@
 #
 # Simple Firewall configuration.
 #
-# Author: Nicolargo
+# Author: Nicolargo, modified by robinparisi and benjamin74
 #
 # chkconfig: 2345 9 91
 # description: Activates/Deactivates the firewall at boot time
@@ -19,10 +19,13 @@
 
 PATH=/bin:/sbin:/usr/bin:/usr/sbin
 
-# Services that the system will offer to the network
+# INCOMING CONNECTIONS
+# i.e. OUTSIDE WORLD ----> THE SERVER WHERE THE SCRIPT IS INSTALLED
 TCP_SERVICES="22" # SSH 
 UDP_SERVICES=""
-# Services the system will use from the network
+
+# OUTGOING CONNECTIONS
+# i.e. THE SERVER WHERE THE SCRIPT IS INSTALLED ------> OUTSIDE WORLD
 REMOTE_TCP_SERVICES="80 443" # web browsing
 REMOTE_UDP_SERVICES="53" # DNS
 # FTP backups 
