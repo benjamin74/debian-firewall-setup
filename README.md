@@ -36,6 +36,8 @@ Example, to allow the server to connect to the internet (to download updates @ u
     REMOTE_TCP_SERVICES="80 443"
 
 ##Testing and running the script :
+
+**On OpenVZ Vms you need to ENABLE tun/tap or you might get "iptables: No chain/target/match by that name" error messages.**
   
 Test the rules for 30 seconds :
 
